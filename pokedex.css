@@ -414,3 +414,35 @@
     -o-border-radius:0px 0px 0px 0px;
 }
  
+.pantdes{
+    width: 85%;
+   height: 110px;
+   position: relative;
+   background-color: #96D9A5;
+   top: 10px;
+   left: 50%;
+   transform: translate(-50%,0);
+   -webkit-transform: translate(-50%,0);
+   -moz-transform: translate(-50%,0);
+   -ms-transform: translate(-50%,0);
+   -o-transform: translate(-50%,0);
+   border: 3px solid rgba(00, 00, 00, .6);
+   border-radius: 7px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   -ms-border-radius: 7px;
+   -o-border-radius: 7px;
+   font-size: 8px;
+   padding: 20px;
+   padding-top: 0px;
+  color: rgba(00, 00, 00, .7);
+}
+.pantdes p{
+    line-height: 11px;
+
+}
+
+.pantdes span{
+    position: relative;
+    top: -5px;
+}
