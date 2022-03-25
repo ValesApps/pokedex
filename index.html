@@ -4,17 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex LaunchX</title>
+    <title>Pokedex Valesapps</title>
+    <link rel="stylesheet" href="./pokedex.css">
+    <script src="./pokedex.js"></script>
     
     
 </head>
 <body>
-    <h1>Pokedex LaunchX</h1>
-    <input type="text" placeholder="pikachu" id="pokeName" name="pokeName"><br>
-    <img src="./assets/img/pokeball.png" alt="Pokemon" id="pokeImg" width="150px"><br>
-    <button onclick="fetchPokemon()">Cambiar Pokemon</button>
+    <h1>Pokedex valesapps</h1>
+    <section class="pdubicacion">
+
+        <!--Lado izquierdo de la pokedex-->
+        <div class="lizquierdo">
+
+            <!-- luces azul rojo verde y amarillo-->
+            <div class="detalleiz">
+                <div class="detalleiz1">
+                    <div class="cirazul">
+
+                    </div>
+    
+                </div>
+
+                <div class="detalleiz2">
+                    <div class="cirojo">
+                    </div>
+                    <div class="ciramarillo">
+                    </div>
+                    <div class="cirverde">
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="pantallaimg">
+                <div id="pokemoName" class="blank"><span>BIENVENIDO</span></div>
+                <div id="tipo1" class="none"><span>Tipo</span></div>
+                <div id="tipo2" class="none"><span>Tipo</span></div>
+                <div id="pokeID"> <span>ID:###</span></div>
+                <div id="height"><span>Tamaño</span></div>
+                <div id="weight"><span>Peso</span></div>
+                <div id="habitat"><span>Habitad</span></div>
+
+                <div class="pokeimagen"><img width="100%" id="pokeImg" class="blank"></div>
+
+            </div>
+            <div class="corte"></div>
+            <div class="cirojo2"></div>
+            <div class="select">select</div>
+            <div>
+                <button onclick="fetchPokemon()"class="start">buscar</button>
+
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Ingresar" id="pokeName" 
+                name="pokeName" class="box" onkeypress="">
+            </div>
+            <div class="cirnegro"></div>
+            <div class="cruz">
+                <div class="cruzver"></div>
+                <div class="cruzhor"></div>
+                
+                <div class="cruzcen"></div>
+            </div>
+
+        </div>
+        
+        <div class="lderechotam">
+            <div class="ladoderechotA">
+                <div class="ladoderechotA1"></div>
+                <div class="ladoderechotA2"></div>
+            </div>
+            <div class="lderecho">
+
+            </div>
+
+        </div>
+        
+    </section>
+    
 </body>
 <footer>
-    <script src="./4.-pokedex.js"></script>
+    <script src=></script>
 </footer>
 </html>
