@@ -1,615 +1,112 @@
-*{
-    font-family:fantasy;
-
-    font-weight:100;
-    color: rgb(34, 34, 34
-    );
-}
-/*ubicacion de la pokedex*/
-.pdubicacion{
-    position: relative;
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-}
-
-/*forma de la PD*/
-.lizquierdo{
-
-    width: 450px;
-    height: 550px;
-    background-color: rgb(207, 57, 57);
-    position: relative;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Valesapps</title>
+    <link rel="stylesheet" href="./pokedex.css">
+    <script src="./pokedex.js"></script>
     
-    border-radius: 45px 20px 20px 45px;
-    -webkit-border-radius: 45px 20px 20px 45px;
-    -moz-border-radius: 45px 20px 20px 45px;
-    -ms-border-radius: 45px 20px 20px 45px;
-    -o-border-radius: 45px 20px 20px 45px;
-
-    border-width: 10px 5px 10px 13px;
-    border-color: rgb(110, 27, 27);
-    border-style: solid solid solid solid;
-}
-.lderechotam{
-    height: 530px;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.lderecho{
-
-    height: 82%;
-    width: 100%;
-    background-color: rgb(207, 57, 57);
-    position: relative;
-    border-radius: 0px 34px 45px 20px;
-    -webkit-border-radius: 0px 34px 45px 20px;
-    -moz-border-radius: 0px 34px 45px 20px;
-    -ms-border-radius: 0px 34px 45px 20px;
-    -o-border-radius: 0px 34px 45px 20px;
-
-    border-width: 0px 13px 10px 10px;
-    border-color: rgba(0, 0, 0, 0.473);
-    border-style: solid solid solid solid;
-
-}
-.detalleiz{
-    width: 100%;
-    height: 60px;
-    position: absolute;
-    top: 0px;
-    background-color: rgb(207, 57, 57);
-    border-top-left-radius: 30px;
-    display: flex;
-    justify-content: flex-start;
-
-}
-
-.detalleiz1{
-    background-color:rgb(150, 29, 29);
-    height: 83%;
-    width: 50%;
-    border-width: 0px 15px 15px 0px;
-    border-color: rgb(150, 29, 29);
-    border-style: solid solid solid solid;
-    border-top-left-radius: 25px;
-    position: relative;
-}
-.detalleiz2{
-    height: 0px;
-    width:  300px;
-    border-width: 35px 0px 30px 30px;
-    border-color:rgb(150, 29, 29) transparent transparent rgb(150, 29, 29) ;
-    border-style: solid solid solid solid;
-    border-bottom-right-radius: 25px; 
-}
-.cirazul{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 5px solid rgb(184, 181, 182);
-    margin-left: 15px;
-
-}
-.cirojo{
-    width: 19px;
-    height: 19px;
-    background-color: red;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 3px solid rgb(184, 181, 182);
-    position: absolute;
-    left: 80px;
-    top: 5px;
-}
-.cirojo2{
-    width: 19px;
-    height: 19px;
-    background-color: red;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 3px solid rgb(184, 181, 182);
-    position: absolute;
-    left: 68px;
-    top: 350px;
-
-}
-.ciramarillo{
-    width: 19px;
-    height: 19px;
-    background-color: yellow;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 3px solid rgb(184, 181, 182);
-    position: absolute;
-    left: 110px;
-    top: 5px;
-}
-.cirverde{
-    width: 19px;
-    height: 19px;
-    background-color: green;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 3px solid rgb(184, 181, 182);
-    position: absolute;
-    left: 140px;
-    top: 5px;
-
-}
-
-/* Pantallita*/
-.pantallaimg{
-    width: 330px;
-    height: 250px;
-    background-color: rgba(13, 132, 243, 0.959);
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translate(-50%,0);
-    border-width: 20px 25px 40px 25px;
-    border-style: solid;
-    border-radius: 15px 15px 15px 0px;
-    border-color: rgb(218, 224, 191);
-    display: grid;
-    grid-template-areas: 
-    'name name name name '
-    'blank blank blank id'
-    'blank blank blank Type'
-    'blank blank blank Type2'
-    'blank blank blank Weight'
-    'blank blank blank Height'
-    'blank blank blank Habitat';
-
-    grid-template-columns: 1fr 1fr 1fr 90px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    font-size: 9px;
-
-}
-.pantallaimg div{
-    border: 3px soild rgba(18,35,43,7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    -webkit-border-radius:6px;
-    -ms-border-radius:6px;
-    -o-border-radius:6px;
-}
-
-#pokemoName{
-    grid-area: name;
-    font-size: medium;
-    margin: 2px;
-
-}
-#pokeID{
-    grid-area: id;
-    height: 25px;
-    margin:2px;
-    background-color: rgba(0, 0, 0, 0.473);
-}
-#tipo1{
-    grid-area: Type;
-    width: 64px;
-    height: 20px;
-    border-radius: 10px;
-    -webkit-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-    margin-left: 12px;
-    font-size: 8px;
-    background-color: rgba(0, 0, 0, 0.473);
-
-
-}
-#tipo2{
-    grid-area: Type2;
-    width: 64px;
-    height: 20px;
-    border-radius: 10px;
-    -webkit-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-    margin-left: 12px;
-    font-size: 8px;
-    background-color: rgba(0, 0, 0, 0.473);
-
-}
-
-#weight{
-    grid-area: Weight;
-    height: 25px;
-    margin:2px;
-    background-color: rgba(0, 0, 0, 0.473);
-}
-
-#height{
-    grid-area: Height;
-    height: 25px;
-    margin:2px;
-    background-color: rgba(0, 0, 0, 0.473);
-
-}
-.pokeimagen{
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 40px;
-    left: 20px;
-}
-
-.corte{
-    position: absolute;
-    top: 350px;
-    left: -6px;
-    border: 30px;
-    border-color:rgb(207, 57, 57) transparent transparent transparent;
-    border-style: solid;
-    background-color: transparent;
-    transform: rotate(45deg);
     
-}
+</head>
+<body>
+    <h1>Pokedex valesapps</h1>
+    <section class="pdubicacion">
 
-.select{
-    width: 70px;
-    height: 17px;
-    position: absolute;
-    top: 390px;
-    left: 120px;
-    background-color: rgb(170, 32, 32);
-    border-radius: 10px;
-    border: 2px solid rgb(133, 133, 91);
+        <!--Lado izquierdo de la pokedex-->
+        <div class="lizquierdo">
+
+            <!-- luces azul rojo verde y amarillo-->
+            <div class="detalleiz">
+                <div class="detalleiz1">
+                    <div class="cirazul">
+
+                    </div>
     
-}
-.start{
-    width: 70px;
-    height: 23px;
-    position: absolute;
-    top: 390px;
-    left: 200px;
-    background-color: rgb(32, 57, 170);
-    border-radius: 10px;
-    border: 2px solid rgb(133, 133, 91);
+                </div>
+
+                <div class="detalleiz2">
+                    <div class="cirojo">
+                    </div>
+                    <div class="ciramarillo">
+                    </div>
+                    <div class="cirverde">
+                    </div>
+
+                </div>
     
-}
-.start button{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(32, 57, 170);
-    border-radius: 10px;
-    border: 1px solid rgb(133, 133, 91);
-   
-    text-align: center;
+            </div>
+
+            <div class="pantallaimg">
+                <div id="pokemoName"><span>BIENVENIDO</span></div>
+                <div id="tipo1"><span>Tipo</span></div>
+                <div id="tipo2"><span>Tipo</span></div>
+                <div id="pokeID"> <span>ID:###</span></div>
+                <div id="weight"><span>Peso</span></div>
+                <div id="height"><span>Tamaño</span></div>
+                <div id="habitat"><span>Habitad</span></div>
+                <div class="pokeimagen"><img width="100%" id="pokeImg"></div>
+
+            </div>
+            <div class="corte"></div>
+            <div class="cirojo2"></div>
+            <div class="select">select</div>
+            <div>
+                <button onclick="fetchPokemon()"class="start">buscar</button>
+
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Ingresar" id="pokeName" 
+                name="pokeName" class="box" onkeypress="">
+            </div>
+            <div class="cirnegro"></div>
+            <div class="cruz">
+                <div class="cruzver"></div>
+                <div class="cruzhor"></div>
+                
+                <div class="cruzcen"></div>
+            </div>
+
+        </div>
+        
+        <div class="lderechotam">
+            <div class="ladoderechotA">
+                <div class="ladoderechotA1"></div>
+                <div class="ladoderechotA2"></div>
+            </div>
+            <div class="lderecho">
+                <div class="pantdes"></div>
+                <div class="botoncin"></div>
+                <div class="botoncin2"></div>
+                <div class="cuadrosazules">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="cuadritosb">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="cajanegra1"></div>
+                <div class="cajanegra2"></div>
+                <div class="ciramarilloder"></div>
+
+            </div>
+
+        </div>
+        
+    </section>
     
-}
-.cirnegro{
-    width: 50px;
-    height: 50px;
-    top: 430px;
-    left: 10px;
-    background-color: black;
-    position: absolute;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 2px solid rgb(184, 181, 182);
-    margin-left: 15px;
-    
-}
-.cruz{
-    width: 96px;
-    height: 96px;
-    position: absolute;
-    top: 400px;
-    right: 45px;
-    /*background-color: aqua;*/
-}
-.cruzver{
-    width: 33px;
-    height: 90px;
-    position: absolute;
-    left: 40%;
-    background-color: rgb(8, 8, 8);
-    
-    border: 2px solid rgb(133, 133, 91);
-}
-.cruzhor{
-    width: 33px;
-    height: 90px;
-    position: absolute;
-    left: 40%;
-    background-color: rgb(8, 8, 8);
-    
-    border: 2px solid rgb(133, 133, 91);
-    transform:rotate(90deg);
-}
-.cruzcen{
-    width: 33px;
-    height: 34px;
-    position: absolute;
-    top:29%;
-    left: 40%;
-    background-color: rgb(8, 8, 8);
-    border: 2px solid rgb(8, 8, 8);
-
-}
-
-
-/* input para la busqueda*/
-.input{
-    position: absolute;
-    top: 77%;
-    left: 25%;
-    height: 70px;
-    width: 170px;
-    background-color: rgb(21, 85, 40);
-}
-.box{
-    height: 97%;
-    width: 97%;
-    background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    color: black;
-}
-
-/* detalles del lado derecho*/
-.ladoderechotA{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-
-}
-.ladoderechotA1{
-    height: 100%;
-    width: 65%;
-    background-color:rgb(207, 57, 57); 
-    
-    border-top-right-radius: 10px;
-    border-width: 10px 0px 0px 10px;
-    border-color:rgb(110, 27, 27);
-    border-style: solid solid solid solid;
-}
-.ladoderechotA2{
-    height: 13px;
-    width: 40%;
-    background-color: transparent;
-    border-width: 20px 30px 20px 22px;
-    border-color: transparent transparent rgb(110, 27, 27) rgb(110, 27, 27);
-    border-style: solid solid solid solid;
-    border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    -moz-border-radius:0px 0px 0px 0px;
-    -ms-border-radius:0px 0px 0px 0px;
-    -o-border-radius:0px 0px 0px 0px;
-}
- 
-.pantdes{
-    width: 85%;
-   height: 150px;
-   position: relative;
-   background-color: #96D9A5;
-   top: 10px;
-   left: 50%;
-   transform: translate(-50%,0);
-   -webkit-transform: translate(-50%,0);
-   -moz-transform: translate(-50%,0);
-   -ms-transform: translate(-50%,0);
-   -o-transform: translate(-50%,0);
-   border: 3px solid rgba(00, 00, 00, .6);
-   border-radius: 7px;
-   -webkit-border-radius: 7px;
-   -moz-border-radius: 7px;
-   -ms-border-radius: 7px;
-   -o-border-radius: 7px;
-   font-size: 8px;
-   padding: 20px;
-   padding-top: 0px;
-  color: rgba(00, 00, 00, .7);
-}
-.pantdes p{
-    line-height: 11px;
-
-}
-
-.pantdes span{
-    position: relative;
-    top: -5px;
-}
-
-.cuadrosazules{
-    width: 90%;
-    height: 55px;
-    background-color: #0181CB;
-    position: relative;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%,0);
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
-    display: grid;
-    grid-template-columns: auto auto auto auto auto ;
-    grid-template-rows: auto auto;
-
-    border: 5px solid rgba(00, 00, 00, .7);
-    gap: 2px;
-
-}
-.cuadrosazules div{
-    border: 1px solid rgba(00, 00, 00, .3);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-}
-
-.cuadritosb{
-width: 20%;
-height: 25px;
-background-color:antiquewhite ;
-position: relative;
-top: 70px;
-left: 15%;
-transform: translate(-50%,0);
--webkit-transform: translate(-50%,0);
--moz-transform: translate(-50%,0);
--ms-transform: translate(-50%,0);
--o-transform: translate(-50%,0);
-border-radius: 8px;
--webkit-border-radius: 8px;
--moz-border-radius: 8px;
--ms-border-radius: 8px;
--o-border-radius: 8px;
-
-display: grid;
-grid-template-columns: auto auto ;
-grid-template-rows: auto;
-
-border: 5px solid rgba(00, 00, 00, .7);
-
-}
-.cuadritosb div{
-    border: 3px solid rgba(00, 00, 00, .3);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-}
-.cajanegra1{
-width: 35%;
-height: 45px;
-background-color:rgb(0, 0, 0) ;
-position: relative;
-top: 90px;
-left: 30%;
-transform: translate(-50%,0);
--webkit-transform: translate(-50%,0);
--moz-transform: translate(-50%,0);
--ms-transform: translate(-50%,0);
--o-transform: translate(-50%,0);
-border-radius: 8px;
--webkit-border-radius: 8px;
--moz-border-radius: 8px;
--ms-border-radius: 8px;
--o-border-radius: 8px;
-
-display: grid;
-grid-template-columns: auto auto ;
-grid-template-rows: auto;
-
-border: 5px solid rgb(0, 0, 0);
-
-}
-.cajanegra2{
-    width: 35%;
-    height: 45px;
-    background-color:rgb(0, 0, 0) ;
-    position: relative;
-    top: 35px;
-    left: 70%;
-    transform: translate(-50%,0);
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    
-    display: grid;
-    grid-template-columns: auto auto ;
-    grid-template-rows: auto;
-    
-    border: 5px solid rgb(0, 0, 0);
-    
-    }
-.botoncin{
-    width:60px;
-    height: 13px;
-    background-color: #323031;
-    position: absolute;
-    top: 260px;
-    right: 30px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
-    border: 2px solid rgba(255, 255, 255, .2);
-
-}
-.botoncin2{
-    width:60px;
-    height: 13px;
-    background-color: #323031;
-    position: absolute;
-    top: 260px;
-    right: 100px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
-    border: 2px solid rgba(255, 255, 255, .2);
-
-}
-.ciramarilloder{
-    width: 27px;
-    height: 27px;
-    background-color: yellow;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius:100%;
-    -ms-border-radius:100%;
-    -o-border-radius:100%;
-    border: 3px solid rgb(184, 181, 182);
-    position: absolute;
-    right: 45px;
-    top: 300px;
-}
+</body>
+<footer>
+    <script src=></script>
+</footer>
+</html>
