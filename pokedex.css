@@ -180,13 +180,11 @@
     display: grid;
     grid-template-areas: 
     'name name name name'
-    'name name name name '
     'blank blank blank id'
     'blank blank blank Type'
     'blank blank blank Type2'
     'blank blank blank Height'
     'blank blank blank Weight'
-    'blank blank blank Height'
     'blank blank blank Habitad';
 
     grid-template-columns: 1fr 1fr 1fr 90px;
@@ -247,22 +245,22 @@
 
 #weight{
     grid-area: Weight;
-    height: 25px;
-    margin:2px;
+    display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.473);
 }
 
 #height{
     grid-area: Height;
-    height: 25px;
-    margin:2px;
+    display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.473);
 
 }
-#habitad{
+#habitat{
     grid-area: Habitad;
-    height: 25px;
-    margin:2px;
+    display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.473);
 }
 .pokeimagen{
